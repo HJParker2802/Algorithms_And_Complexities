@@ -10,6 +10,12 @@ namespace Assignment1
     {
         static void Main(string[] args)
         {
+            int[] Arr = {1,3,2,5,4 };
+            BubbleSort Test = new BubbleSort();
+            Test.Ascending(Arr);
+            Test.Display(Arr);
+            Test.Descending(Arr);
+            Test.Display(Arr);
         }
     }
 }
