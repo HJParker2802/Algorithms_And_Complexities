@@ -8,9 +8,9 @@ namespace Assignment1
 {
     class BubbleSort : Sort
     {
-        public override int[] Ascending(int[] Array)
+        public override List<int> Ascending(List<int> Array)
         {
-            int n = Array.Length;
+            int n = Array.Count;
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - 1 - i; j++)
@@ -25,9 +25,9 @@ namespace Assignment1
             }
             return Array;
         }
-        public override int[] Descending(int[] Array)
+        public override List<int> Descending(List<int> Array)
         {
-            int n = Array.Length;
+            int n = Array.Count;
             for (int i = 0; i < n - 1; i++)
             {
                 for (int j = 0; j < n - 1 - i; j++)

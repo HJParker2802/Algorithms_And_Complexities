@@ -3,16 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\sortalgorithms\\mergesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:sortalgorithms\\mergesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:sort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\bubblesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:bubblesort.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,13 +26,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAqwBAAAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAowBMAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T19:57:40.883Z",
               "IsPinned": true,
@@ -41,15 +41,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Sort.cs",
-              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Sort.cs",
-              "RelativeDocumentMoniker": "Sort.cs",
-              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Sort.cs",
-              "RelativeToolTip": "Sort.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABwAAAAiAAAAAAAAAA==",
+              "Title": "MergeSort.cs",
+              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\SortAlgorithms\\MergeSort.cs",
+              "RelativeDocumentMoniker": "SortAlgorithms\\MergeSort.cs",
+              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\SortAlgorithms\\MergeSort.cs",
+              "RelativeToolTip": "SortAlgorithms\\MergeSort.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T19:59:38.575Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-03-20T02:02:47.453Z",
               "EditorCaption": ""
             },
             {
@@ -58,15 +57,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BubbleSort.cs",
-              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\BubbleSort.cs",
-              "RelativeDocumentMoniker": "BubbleSort.cs",
-              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\BubbleSort.cs",
-              "RelativeToolTip": "BubbleSort.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDQAAAALAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Sort.cs",
+              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Sort.cs",
+              "RelativeDocumentMoniker": "Sort.cs",
+              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Sort.cs",
+              "RelativeToolTip": "Sort.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABwAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T20:04:01.424Z",
+              "WhenOpened": "2025-03-20T02:05:51.967Z",
               "EditorCaption": ""
             }
           ]

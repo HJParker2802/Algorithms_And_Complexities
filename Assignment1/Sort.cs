@@ -9,19 +9,27 @@ namespace Assignment1
 {
     class Sort
     {
-        public virtual int[] Ascending(int[] Array)
+        public virtual List<int> Ascending(List<int> Array)
         {
             Console.WriteLine("Ascending");
             return Array;
         }
-        public virtual int[] Descending(int[] Array)
+        public virtual List<int> Descending(List<int> Array)
         {
             Console.WriteLine("Descending");
             return Array;
         }
-        public virtual void Display(int[] Array)
+        public virtual void Display(List<int> Array)
         {
-            for (int x = 0; x <= Array.Length - 1; x++)
+            if (Array[0] > Array[Array.Count-1])
+            {
+                Console.Write("Descending: ");
+            }
+            else if (Array[0] < Array[Array.Count-1])
+            {
+                Console.Write("Ascending: ");
+            }
+            for (int x = 0; x <= Array.Count - 1; x++)
             {
                 Console.Write(Array[x]);
                 Console.Write(", ");
