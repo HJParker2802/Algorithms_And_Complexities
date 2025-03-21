@@ -11,9 +11,9 @@ namespace Assignment1
         public bool OutOfBounds;
         public virtual int SearchKey(List<int> Array, int start, int stop, int Key)
         {
-            return 1;
+            return 1;//returning 1 so that it doesn't crash, this search does not get used but must return to avoid errors
         }
-        public virtual void Display(int Result)
+        public virtual void Display(int Result)//Default display for all search algorithms
         {
             if (!OutOfBounds)
             {

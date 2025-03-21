@@ -13,11 +13,11 @@ namespace Assignment1
             string destinationFilePath = Path.Combine(Directory.GetCurrentDirectory(), Path.GetFileName(filePath));//Sets the filepath to Debug so that the txt files can be copied there, to ensure that the file will be where the Reader is looking
 
 
-            if (!File.Exists(destinationFilePath))
+            if (!File.Exists(destinationFilePath))//Checking the destination file path does not exist
             {
                 if (File.Exists(sourceFilePath))
                 {
-                    File.Copy(sourceFilePath, destinationFilePath);
+                    File.Copy(sourceFilePath, destinationFilePath);//Copying the file over to Debug folder for easy use
                 }
                 else
                 {
@@ -26,7 +26,7 @@ namespace Assignment1
                 }
             }
 
-            string[] lines = File.ReadAllLines(destinationFilePath);
+            string[] lines = File.ReadAllLines(destinationFilePath);//Creates string list to hold all lines of txt files
             List<int> integerList = new List<int>();
 
             foreach (string line in lines)

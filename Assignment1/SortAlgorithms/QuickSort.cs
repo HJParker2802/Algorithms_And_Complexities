@@ -11,77 +11,81 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
+            comparisons = 0;
+            swaps = 0;
             QuickSortAscending(Array, 0, Array.Count - 1);
-            return Array;
+            return Array;//returns sorted array at the end 
         }
         public void QuickSortAscending(List<int> Array, int Left, int Right)
         {
-            int i, j;
-            int pivot, temp;
-            i = Left;
-            j = Right;
-            pivot = Array[(Left + Right) / 2];
+            int LeftPointer, RightPointer;
+            int Middle, temp;
+            LeftPointer = Left;
+            RightPointer = Right;
+            Middle = Array[(Left + Right) / 2];
             do
             {
-                while ((Array[i] < pivot) && (i < Right))
+                while ((Array[LeftPointer] < Middle) && (LeftPointer < Right))
                 {
-                    i++;
+                    LeftPointer++;//Moves to the right while looking for number bigger than middle
                     comparisons++;
                 }
-                while ((pivot < Array[j]) && (j > Left)) 
+                while ((Middle < Array[RightPointer]) && (RightPointer > Left)) 
                 {
-                    j--;
+                    RightPointer--;//Moves to the right looking for number smaller than middle
                     comparisons++;
                 }
-                if (i <= j)
+                if (LeftPointer <= RightPointer)
                 {
-                    temp = Array[i];
-                    Array[i] = Array[j];
-                    Array[j] = temp;
+                    temp = Array[LeftPointer];
+                    Array[LeftPointer] = Array[RightPointer];
+                    Array[RightPointer] = temp;//Swaps Left and Right Pointers
                     swaps++;
-                    i++;
-                    j--;
+                    LeftPointer++;
+                    RightPointer--;
                 }
-            } while (i <= j);
-            if (Left < j) QuickSortAscending(Array, Left, j);
-            if (i < Right) QuickSortAscending(Array, i, Right);
-        }
+            } while (LeftPointer <= RightPointer);
+            if (Left < RightPointer) QuickSortAscending(Array, Left, RightPointer);//Sorts the left part
+            if (LeftPointer < Right) QuickSortAscending(Array, LeftPointer, Right);//Sorts the right part
+        }   
         public override List<int> Descending(List<int> Array)
         {
+            comparisons = 0;
+            swaps = 0;
             QuickSortDescending(Array, 0, Array.Count - 1);
-            return Array;
+            return Array;//returns sorted array at the end 
         }
         public void QuickSortDescending(List<int> Array, int left, int right)
         {
-            int i, j;
-            int pivot, temp;
-            i = left;
-            j = right;
-            pivot = Array[(left + right) / 2];
+            int LeftPointer, RightPointer;
+            int Middle, temp;
+            LeftPointer = left;
+            RightPointer = right;
+            Middle = Array[(left + right) / 2];
             do
             {
-                while ((Array[i] > pivot) && (i < right)) 
-                { 
-                    i++;
-                    comparisons++;
-                }
-                while ((pivot > Array[j]) && (j > left)) 
-                { 
-                    j--;
-                    comparisons++;
-                }
-                if (i <= j)
+                while ((Array[LeftPointer] > Middle) && (LeftPointer < right)) 
                 {
-                    temp = Array[i];
-                    Array[i] = Array[j];
-                    Array[j] = temp;
-                    swaps++;
-                    i++;
-                    j--;
+                    LeftPointer++;//Moves to the right while looking for number bigger than middle
+                    comparisons++;
                 }
-            } while (i <= j);
-            if (left < j) QuickSortDescending(Array, left, j);
-            if (i < right) QuickSortDescending(Array, i, right);
+                while ((Middle > Array[RightPointer]) && (RightPointer > left)) 
+                {
+                    RightPointer--;//Moves to the right looking for number smaller than middle
+                    comparisons++;
+                }
+                if (LeftPointer <= RightPointer)
+                {
+                    temp = Array[LeftPointer];
+                    Array[LeftPointer] = Array[RightPointer];
+                    Array[RightPointer] = temp;//Swaps Left and Right Pointers
+                    swaps++;
+                    LeftPointer++;
+                    RightPointer--;
+                }
+            } while (LeftPointer <= RightPointer);
+            if (left < RightPointer) QuickSortDescending(Array, left, RightPointer);//Sorts the left part
+            if (LeftPointer < right) QuickSortDescending(Array, LeftPointer, right);//Sorts the right part
         }
     }
 }

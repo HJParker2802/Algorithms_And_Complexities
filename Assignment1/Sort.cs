@@ -21,7 +21,7 @@ namespace Assignment1
             Console.WriteLine("Descending");
             return Array;
         }
-        public virtual void Display(List<int> Array)
+        public virtual void Display(List<int> Array)//Default display for all sorting algorithms to display
         {
             if (Array[0] > Array[Array.Count - 1])
             {
@@ -37,7 +37,7 @@ namespace Assignment1
                 Console.Write(", ");
             }
             Console.Write("\b\b \n\n");//Sends log text backwards from the space to the comma and then overrides the comma with a space
-            Console.WriteLine($"Comparisons:{comparisons}, Swaps:{swaps}");
+            Console.WriteLine($"Comparisons:{comparisons}, Swaps:{swaps}");//Displays comparisons and swaps made per display call
 
         }
     }
