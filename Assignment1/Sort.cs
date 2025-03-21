@@ -9,6 +9,8 @@ namespace Assignment1
 {
     class Sort
     {
+        public int comparisons;
+        public int swaps;
         public virtual List<int> Ascending(List<int> Array)
         {
             Console.WriteLine("Ascending");
@@ -34,7 +36,9 @@ namespace Assignment1
                 Console.Write(Array[x]);
                 Console.Write(", ");
             }
-            Console.Write("\b\b \n");//Sends log text backwards from the space to the comma and then overrides the comma with a space
+            Console.Write("\b\b \n\n");//Sends log text backwards from the space to the comma and then overrides the comma with a space
+            Console.WriteLine($"Comparisons:{comparisons}, Swaps:{swaps}");
+
         }
     }
 }

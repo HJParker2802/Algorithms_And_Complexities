@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,6 +11,8 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
+            comparisons = 0;
+            swaps = 0;
             int ArrayLength = Array.Count;
             for (int i = 1; i < ArrayLength; i++)
             {
@@ -17,7 +20,9 @@ namespace Assignment1.SortAlgorithms
                 int j = i - 1;
                 while (j >= 0 && Array[j] > Key)
                 {
+                    comparisons++;
                     Array[j + 1] = Array[j];
+                    swaps++;
                     j = j - 1;
                 }
                 Array[j + 1] = Key;
@@ -33,8 +38,17 @@ namespace Assignment1.SortAlgorithms
                 int j = i - 1;
                 while (j >= 0 && Array[j] < Key)
                 {
-                    Array[j + 1] = Array[j];
-                    j = j - 1;
+                    comparisons++;
+                    if (Array[i] > Key)
+                    {
+                        Array[j + 1] = Array[j];
+                        swaps++;
+                        j = j - 1;
+                    }
+                    else
+                    {
+                        break;
+                    }
                 }
                 Array[j + 1] = Key;
             }

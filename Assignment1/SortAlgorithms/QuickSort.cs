@@ -14,7 +14,7 @@ namespace Assignment1.SortAlgorithms
             QuickSortAscending(Array, 0, Array.Count - 1);
             return Array;
         }
-        public static void QuickSortAscending(List<int> Array, int Left, int Right)
+        public void QuickSortAscending(List<int> Array, int Left, int Right)
         {
             int i, j;
             int pivot, temp;
@@ -23,13 +23,22 @@ namespace Assignment1.SortAlgorithms
             pivot = Array[(Left + Right) / 2];
             do
             {
-                while ((Array[i] < pivot) && (i < Right)) i++;
-                while ((pivot < Array[j]) && (j > Left)) j--;
+                while ((Array[i] < pivot) && (i < Right))
+                {
+                    i++;
+                    comparisons++;
+                }
+                while ((pivot < Array[j]) && (j > Left)) 
+                {
+                    j--;
+                    comparisons++;
+                }
                 if (i <= j)
                 {
                     temp = Array[i];
                     Array[i] = Array[j];
                     Array[j] = temp;
+                    swaps++;
                     i++;
                     j--;
                 }
@@ -42,7 +51,7 @@ namespace Assignment1.SortAlgorithms
             QuickSortDescending(Array, 0, Array.Count - 1);
             return Array;
         }
-        public static void QuickSortDescending(List<int> Array, int left, int right)
+        public void QuickSortDescending(List<int> Array, int left, int right)
         {
             int i, j;
             int pivot, temp;
@@ -51,13 +60,22 @@ namespace Assignment1.SortAlgorithms
             pivot = Array[(left + right) / 2];
             do
             {
-                while ((Array[i] > pivot) && (i < right)) i++;
-                while ((pivot > Array[j]) && (j > left)) j--;
+                while ((Array[i] > pivot) && (i < right)) 
+                { 
+                    i++;
+                    comparisons++;
+                }
+                while ((pivot > Array[j]) && (j > left)) 
+                { 
+                    j--;
+                    comparisons++;
+                }
                 if (i <= j)
                 {
                     temp = Array[i];
                     Array[i] = Array[j];
                     Array[j] = temp;
+                    swaps++;
                     i++;
                     j--;
                 }

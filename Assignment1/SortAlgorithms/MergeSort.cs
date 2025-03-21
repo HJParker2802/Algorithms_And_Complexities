@@ -10,6 +10,9 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
+            comparisons = 0;
+            swaps = 0;
+
             if (Array.Count <= 1)
                 return Array;
             List<int> Left = new List<int>();
@@ -29,7 +32,7 @@ namespace Assignment1.SortAlgorithms
             return MergeAscending(Left, Right);
         }
 
-        private static List<int> MergeAscending(List<int> Left, List<int> Right)
+        public List<int> MergeAscending(List<int> Left, List<int> Right)
         {
             List<int> Result = new List<int>();
 
@@ -37,33 +40,40 @@ namespace Assignment1.SortAlgorithms
             {
                 if (Left.Count > 0 && Right.Count > 0)
                 {
+                    comparisons++;
                     if (Left.First() <= Right.First())
                     {
                         Result.Add(Left.First());
                         Left.Remove(Left.First());
+                        swaps++;
                     }
                     else
                     {
                         Result.Add(Right.First());
                         Right.Remove(Right.First());
+                        swaps++;
                     }
                 }
                 else if (Left.Count > 0)
                 {
                     Result.Add(Left.First());
                     Left.Remove(Left.First());
+                    swaps++;
                 }
                 else if (Right.Count > 0)
                 {
                     Result.Add(Right.First());
                     Right.Remove(Right.First());
+                    swaps++;
                 }
             }
             return Result;
         }
 
-    public override List<int> Descending(List<int> Array)
+        public override List<int> Descending(List<int> Array)
         {
+            comparisons = 0;
+            swaps = 0;
             if (Array.Count <= 1)
                 return Array;
             List<int> Left = new List<int>();
@@ -83,7 +93,7 @@ namespace Assignment1.SortAlgorithms
             return MergeDescending(Left, Right);
         }
         
-        private static List<int> MergeDescending(List<int> Left, List<int> Right)
+        private List<int> MergeDescending(List<int> Left, List<int> Right)
         {
             List<int> Result = new List<int>();
 
@@ -91,26 +101,31 @@ namespace Assignment1.SortAlgorithms
             {
                 if (Left.Count > 0 && Right.Count > 0)
                 {
+                    comparisons++;
                     if (Left.First() >= Right.First())
                     {
                         Result.Add(Left.First());
                         Left.Remove(Left.First());
+                        swaps++;
                     }
                     else
                     {
                         Result.Add(Right.First());
                         Right.Remove(Right.First());
+                        swaps++;
                     }
                 }
                 else if (Left.Count > 0)
                 {
                     Result.Add(Left.First());
                     Left.Remove(Left.First());
+                    swaps++;
                 }
                 else if (Right.Count > 0)
                 {
                     Result.Add(Right.First());
                     Right.Remove(Right.First());
+                    swaps++;
                 }
             }
             return Result;
