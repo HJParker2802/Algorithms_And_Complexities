@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileReader.cs" />
     <Compile Include="SearchAlgorithms\BinarySearch.cs" />
     <Compile Include="SearchAlgorithms\SequentialSearch.cs" />
     <Compile Include="SortAlgorithms\BubbleSort.cs" />
@@ -58,8 +59,17 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="TxtFiles\" />
+    <EmbeddedResource Include="Files\Test.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Files\Share_1_2048.txt" />
+    <Content Include="Files\Share_1_256.txt" />
+    <Content Include="Files\Share_2_2048.txt" />
+    <Content Include="Files\Share_2_256.txt" />
+    <Content Include="Files\Share_3_2048.txt" />
+    <Content Include="Files\Share_3_256.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
