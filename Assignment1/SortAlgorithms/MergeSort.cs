@@ -10,6 +10,8 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
+            if (Array.Count <= 1)
+                return Array;
             List<int> Left = new List<int>();
             List<int> Right = new List<int>();
 
@@ -27,8 +29,7 @@ namespace Assignment1.SortAlgorithms
             return MergeAscending(Left, Right);
         }
 
-
-        public static List<int> MergeAscending(List<int> Left, List<int> Right)
+        private static List<int> MergeAscending(List<int> Left, List<int> Right)
         {
             List<int> Result = new List<int>();
 
@@ -61,8 +62,10 @@ namespace Assignment1.SortAlgorithms
             return Result;
         }
 
-        public override List<int> Descending(List<int> Array)
+    public override List<int> Descending(List<int> Array)
         {
+            if (Array.Count <= 1)
+                return Array;
             List<int> Left = new List<int>();
             List<int> Right = new List<int>();
 
@@ -79,8 +82,8 @@ namespace Assignment1.SortAlgorithms
             Right = Descending(Right);
             return MergeDescending(Left, Right);
         }
-
-        public static List<int> MergeDescending(List<int> Left, List<int> Right)
+        
+        private static List<int> MergeDescending(List<int> Left, List<int> Right)
         {
             List<int> Result = new List<int>();
 
@@ -112,7 +115,5 @@ namespace Assignment1.SortAlgorithms
             }
             return Result;
         }
-
-
     }
 }

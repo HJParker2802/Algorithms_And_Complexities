@@ -21,11 +21,11 @@ namespace Assignment1
         }
         public virtual void Display(List<int> Array)
         {
-            if (Array[0] > Array[Array.Count-1])
+            if (Array[0] > Array[Array.Count - 1])
             {
                 Console.Write("Descending: ");
             }
-            else if (Array[0] < Array[Array.Count-1])
+            else if (Array[0] < Array[Array.Count - 1])
             {
                 Console.Write("Ascending: ");
             }

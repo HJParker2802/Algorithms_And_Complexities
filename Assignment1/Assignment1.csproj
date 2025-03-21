@@ -53,6 +53,7 @@
     <Compile Include="SortAlgorithms\InsertionSort.cs" />
     <Compile Include="SortAlgorithms\MergeSort.cs" />
     <Compile Include="SortAlgorithms\QuickSort.cs" />
+    <Compile Include="Testing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
