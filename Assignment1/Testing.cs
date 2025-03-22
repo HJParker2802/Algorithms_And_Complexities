@@ -111,14 +111,14 @@ namespace Assignment1
                 //Searching
                 DisplayUnsorted(SearchList);
                 int Key = 5;
-                int Answer = Binary.SearchKey(SearchList, 0, SearchList.Count, Key);
+                var Answer = Binary.SearchKey(SearchList, 0, SearchList.Count, Key);
                 Console.WriteLine($"Looking for number:{Key}");
                 Binary.Display(Answer);
                 Console.WriteLine();
 
                 DisplayUnsorted(SearchList2);
                 int Key2 = 1;
-                int Answer2 = Sequential.SearchKey(SearchList2, 0, SearchList2.Count, Key2);
+                var Answer2 = Sequential.SearchKey(SearchList2, 0, SearchList2.Count, Key2);
                 Console.WriteLine($"Looking for number:{Key2}");
                 Binary.Display(Answer2);
                 Console.WriteLine();

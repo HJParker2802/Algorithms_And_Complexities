@@ -64,6 +64,8 @@ namespace Assignment1
                         string SearchChoice = Console.ReadLine().ToUpper();
                         if (SearchChoice.Contains("BINARY"))
                         {
+                            //To do Binary, the number must be sorted so will be sorted with Merge 
+                            CurrentList = Merge.Ascending(CurrentList);
                             Console.WriteLine("What number would you like to find?");
                             string strKey = Console.ReadLine();
                             bool Conversion = int.TryParse(strKey, out int Key);

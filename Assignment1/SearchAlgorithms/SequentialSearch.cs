@@ -8,24 +8,30 @@ namespace Assignment1.SearchAlgorithms
 {
     class SequentialSearch : Searching
     {
-        public override int SearchKey(List<int> Array, int start, int stop, int Key)
+        public override List<int> SearchKey(List<int> Array, int start, int stop, int Key)
         {
+            List<int> Result = new List<int>();
             if (!(Array.Contains(Key)))
             {
                 OutOfBounds = true;
-                return -1;
-                
+                return Result;
+            }
+            else if (start < 0 || stop >= Array.Count || start > stop)
+            {
+                OutOfBounds = true;
+                return Result;
             }
             else
             {
-                int i = 0;
-                while (Array[i] != Key)
+                for (int i = start; i <= stop; i++)  // Iterate from start to stop indices
                 {
-                    i = i + 1;
+                    if (Array[i] == Key)
+                    {
+                        Result.Add(i);  // Add the index to the result list if the key matches
+                    }
                 }
-                if (i < stop) { return i; }
-                else return -1;
             }
+            return Result;
         }
     }
 }
