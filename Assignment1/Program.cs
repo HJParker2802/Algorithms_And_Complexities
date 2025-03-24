@@ -16,8 +16,9 @@ namespace Assignment1
         static void Main(string[] args)
         {
             //Declaring Objects
-            //FileReader
+            //FileReader and creater
             FileReader read = new FileReader();
+            TxtCreater TextMaker = new TxtCreater();
 
             //Sorters
             BubbleSort Bubble = new BubbleSort();
@@ -29,27 +30,23 @@ namespace Assignment1
             BinarySearch Binary = new BinarySearch();
             SequentialSearch Sequential = new SequentialSearch();
 
-            TxtCreater TextMaker = new TxtCreater();
-
-
-
             bool Done = false;
-            while (!Done)
+            while (!Done)//Loops so the user can go through tasks as many times as they desire
             {
-
                 Console.WriteLine("Do you want to run the Tasks or UI? ");
                 string Answer = Console.ReadLine().ToUpper();
-                if (Answer.Contains("U"))
+                if (Answer.Contains("U"))//Allows user to run the UI that's previously made
                 {
                     UserInterface();
                     Done = true;
                 }
-                else if (Answer.Contains("T"))
+                else if (Answer.Contains("T"))//Allows user to run the Tasks
                 {
                     Done = true;
                     Console.WriteLine("Task 1");
                     //Task 1
                     //====================================================================================================================================
+                    //Creates the Share arrays
                     List<int> Share1_256 = read.ReadFile("Share_1_256.txt");
                     List<int> Share2_256 = read.ReadFile("Share_2_256.txt");
                     List<int> Share3_256 = read.ReadFile("Share_3_256.txt");
@@ -57,6 +54,7 @@ namespace Assignment1
                     Console.WriteLine("Task 2");
                     //Task 2
                     //====================================================================================================================================
+                    //Utilises 3 different sorting algorithms (4th one used at the end for merged arrays)
                     Bubble.Ascending(Share1_256);
                     Bubble.DisplayEverySet(Share1_256, 10);
                     
@@ -69,13 +67,14 @@ namespace Assignment1
                     Console.WriteLine("Task 3");
                     //Task3
                     //====================================================================================================================================
+                    //Searches for a user defined value, if not found, console gives pre-made error message
                     Console.WriteLine("Do you want to search Share: 1, 2 or 3");
                     string strAnswer = Console.ReadLine();
                     bool Conversion = int.TryParse(strAnswer, out int ShareAnswer);
                     Console.WriteLine("What number do you want to find?");
                     string strKey = Console.ReadLine();
                     bool KeyConversion= int.TryParse(strKey, out int Key);
-                    if (Conversion == true)
+                    if (Conversion == true && KeyConversion == true) //Checks both conversions are true to ensure both are correct ints
                     {
                         if (ShareAnswer == 1)
                         {
@@ -102,7 +101,7 @@ namespace Assignment1
                     Console.WriteLine("Task 4");
                     //Task 4
                     //====================================================================================================================================
-
+                    //Searches arrays for the key and returns the nearest similar value if value not found 
                     Console.WriteLine("Do you want to search Share: 1, 2 or 3");
                     strAnswer = Console.ReadLine();
                     Conversion = int.TryParse(strAnswer, out ShareAnswer);
@@ -136,6 +135,7 @@ namespace Assignment1
                     Console.WriteLine("Task 5");
                     //Task 5
                     //====================================================================================================================================
+                    //Repeats previous tasks for 2048 txt files 
                     List<int> Share1_2048 = read.ReadFile("Share_1_2048.txt");
                     List<int> Share2_2048 = read.ReadFile("Share_2_2048.txt");
                     List<int> Share3_2048 = read.ReadFile("Share_3_2048.txt");
@@ -217,14 +217,14 @@ namespace Assignment1
                     Console.WriteLine("\n\n\nTask 6\n");
                     //Task 6
                     //=======================================================================================================
-
+                    //Creates a merged array to sort, display and search
                     TextMaker.main("MergedFile.txt", "Share_1_256.txt", "Share_3_256.txt");
                     List<int> MergeArray = read.ReadFile("MergedFile.txt");
 
-                    Merge.Ascending(MergeArray);
-                    Merge.DisplayEverySet(MergeArray, 10);
-                    Merge.Descending(MergeArray);
-                    Merge.DisplayEverySet(MergeArray, 10);
+                    Quick.Ascending(MergeArray);
+                    Quick.DisplayEverySet(MergeArray, 10);
+                    Quick.Descending(MergeArray);
+                    Quick.DisplayEverySet(MergeArray, 10);
                     Console.WriteLine("\n What number would you like to find?");
                     strKey = Console.ReadLine();
                     KeyConversion = int.TryParse(strKey, out Key);
@@ -246,15 +246,16 @@ namespace Assignment1
                     }
                     //Task 7
                     //=================================================================================================
+                    //Creates a merged array of 2048 txt files to sort, display and search
                     Console.WriteLine("Task 7");
 
                     TextMaker.main("MergedFile2.txt", "Share_1_2048.txt", "Share_3_2048.txt");
                     List<int> MergeArray2 = read.ReadFile("MergedFile.txt");
 
-                    Merge.Ascending(MergeArray2);
-                    Merge.DisplayEverySet(MergeArray2, 10);
-                    Merge.Descending(MergeArray2);
-                    Merge.DisplayEverySet(MergeArray2, 10);
+                    Quick.Ascending(MergeArray2);
+                    Quick.DisplayEverySet(MergeArray2, 10);
+                    Quick.Descending(MergeArray2);
+                    Quick.DisplayEverySet(MergeArray2, 10);
                     Console.WriteLine("\n What number would you like to find?");
                     strKey = Console.ReadLine();
                     KeyConversion = int.TryParse(strKey, out Key);
@@ -279,6 +280,15 @@ namespace Assignment1
                 else
                 {
                     Console.WriteLine("You have not given a valid input");
+                }
+
+                //This goes at end so at least one search or sort can be done
+                Console.WriteLine("\n\nWould you like to continue?");
+                string DoneAnswer = Console.ReadLine().ToUpper();
+                if (DoneAnswer.Contains("N"))
+                {
+                    Done = true;
+                    break;
                 }
             }
             Console.WriteLine("Task completed successfully");
