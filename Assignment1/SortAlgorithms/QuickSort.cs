@@ -11,9 +11,10 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
+            //Method to declare variables that can be changed later on with recursion
             comparisons = 0;
             swaps = 0;
-            QuickSortAscending(Array, 0, Array.Count - 1);
+            QuickSortAscending(Array, 0, Array.Count - 1);//Triggers necessary method 
             return Array;//returns sorted array at the end 
         }
         public void QuickSortAscending(List<int> Array, int Left, int Right)
