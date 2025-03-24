@@ -12,14 +12,14 @@ namespace Assignment1
         public virtual List<int> SearchKey(List<int> Array, int start, int stop, int Key)
         {
             List<int> Result = new List<int>();
-            return Result;//returning 1 so that it doesn't crash, this search does not get used but must return to avoid errors
+            return Result;//Returns the result
         }
         public virtual List<int> SearchForClosestValue(List<int> Array, int start, int stop, int Key)
         {
-            return Array;
+            return Array;//Returns the array
         }
 
-        public virtual void Display(List<int> Result)
+        public virtual void Display(List<int> Result)//If key not found, shows error message 
         {
             if (!OutOfBounds && Result.Count > 1)
             {
@@ -47,9 +47,9 @@ namespace Assignment1
                 Console.WriteLine("Something went wrong finding the Key");
             }
         }
-        public virtual void Display_Nearest(List<int> Result)
+        public virtual void Display_Nearest(List<int> Result)//Shows found results and nearest results if key not found
         {
-            if (!OutOfBounds && Result.Count > 1)
+            if (!OutOfBounds && Result.Count > 1)//Set to display for all cases where the number is found more than once
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
                 foreach (var index in Result)
@@ -57,7 +57,7 @@ namespace Assignment1
                     Console.WriteLine($"Index: {index}, Value: {index + 1} in the list");
                 }
             }
-            else if (!OutOfBounds && Result.Count > 0)
+            else if (!OutOfBounds && Result.Count > 0)//Set to display for all cases where the number is found once
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
                 int index = Result[0];
