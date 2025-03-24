@@ -43,7 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FileReader.cs" />
+    <Compile Include="FileItems\FileReader.cs" />
     <Compile Include="SearchAlgorithms\BinarySearch.cs" />
     <Compile Include="SearchAlgorithms\SequentialSearch.cs" />
     <Compile Include="SortAlgorithms\BubbleSort.cs" />
@@ -55,7 +55,7 @@
     <Compile Include="SortAlgorithms\MergeSort.cs" />
     <Compile Include="SortAlgorithms\QuickSort.cs" />
     <Compile Include="Testing.cs" />
-    <Compile Include="TxtCreater.cs" />
+    <Compile Include="FileItems\TxtCreater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

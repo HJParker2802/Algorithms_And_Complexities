@@ -52,7 +52,7 @@ namespace Assignment1
             }
             for (int x = 0; x <= Array.Count - 1; x++)
             {
-                if (x%value == 0)
+                if (x%value == 0)//Makes it display every set number, for some its 10, some 50
                 {
                     Console.Write(Array[x]);
                     Console.Write(", ");
