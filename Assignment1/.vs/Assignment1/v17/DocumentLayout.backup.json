@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\searchalgorithms\\binarysearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:searchalgorithms\\binarysearch.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|c:\\users\\hazpa\\onedrive\\documents\\github\\algorithms_and_complexities\\assignment1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{80467D21-9904-4C17-ABC9-F1151F856727}|Assignment1.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -31,40 +23,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Search.cs",
-              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Search.cs",
-              "RelativeDocumentMoniker": "Search.cs",
-              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Search.cs*",
-              "RelativeToolTip": "Search.cs*",
-              "ViewState": "AgIAABAAAAAAAAAAAAAgwBwAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T19:23:43.31Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAcwEkAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAANAAAAAAAAAAAAAgwOEAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T19:19:02.436Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "BinarySearch.cs",
-              "DocumentMoniker": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\SearchAlgorithms\\BinarySearch.cs",
-              "RelativeDocumentMoniker": "SearchAlgorithms\\BinarySearch.cs",
-              "ToolTip": "C:\\Users\\hazpa\\OneDrive\\Documents\\GitHub\\Algorithms_And_Complexities\\Assignment1\\SearchAlgorithms\\BinarySearch.cs",
-              "RelativeToolTip": "SearchAlgorithms\\BinarySearch.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABoAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T19:05:07.783Z",
               "EditorCaption": ""
             }
           ]

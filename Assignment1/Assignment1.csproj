@@ -55,6 +55,7 @@
     <Compile Include="SortAlgorithms\MergeSort.cs" />
     <Compile Include="SortAlgorithms\QuickSort.cs" />
     <Compile Include="Testing.cs" />
+    <Compile Include="TxtCreater.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
