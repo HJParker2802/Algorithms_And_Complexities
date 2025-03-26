@@ -9,12 +9,12 @@ namespace Assignment1
     class Searching
     {
         public bool OutOfBounds;
-        public virtual List<int> SearchKey(List<int> Array, int start, int stop, int Key)
+        public virtual List<int> SearchKey(List<int> Array, int Start, int Stop, int Key)
         {
             List<int> Result = new List<int>();
             return Result;//Returns the result
         }
-        public virtual List<int> SearchForClosestValue(List<int> Array, int start, int stop, int Key)
+        public virtual List<int> SearchForClosestValue(List<int> Array, int Start, int Stop, int Key)
         {
             return Array;//Returns the array
         }
@@ -24,16 +24,16 @@ namespace Assignment1
             if (!OutOfBounds && Result.Count > 1)
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
-                foreach (var index in Result)
+                foreach (var Index in Result)
                 {
-                    Console.WriteLine($"Index: {index}, Value: {index + 1} in the list");
+                    Console.WriteLine($"Index: {Index}, Value: {Index + 1} in the list");
                 }
             }
             else if (!OutOfBounds && Result.Count > 0)
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
-                int index = Result[0];
-                Console.WriteLine($"Index: {index}");
+                int Index = Result[0];
+                Console.WriteLine($"Index: {Index}");
 
 
                 Console.WriteLine($"\n");
@@ -52,16 +52,16 @@ namespace Assignment1
             if (!OutOfBounds && Result.Count > 1)//Set to display for all cases where the number is found more than once
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
-                foreach (var index in Result)
+                foreach (var Index in Result)
                 {
-                    Console.WriteLine($"Index: {index}, Value: {index + 1} in the list");
+                    Console.WriteLine($"Index: {Index} , Value:  {Index + 1} in the list");
                 }
             }
             else if (!OutOfBounds && Result.Count > 0)//Set to display for all cases where the number is found once
             {
                 Console.WriteLine($"The key was found at the following indeces: ");
-                int index = Result[0];
-                Console.WriteLine($"Index: {index}");
+                int Index = Result[0];
+                Console.WriteLine($"Index: {Index}");
 
 
                 Console.WriteLine($"\n");
