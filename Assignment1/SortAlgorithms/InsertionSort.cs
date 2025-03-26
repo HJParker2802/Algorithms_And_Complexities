@@ -39,16 +39,9 @@ namespace Assignment1.SortAlgorithms
                 while (j >= 0 && Array[j] < Key)
                 {// Array[j] < Key is what makes this descending
                     Comparisons++;
-                    //if (Array[i] > Key)
-                    //{
-                        Array[j + 1] = Array[j];//Shift the element to the 
-                        Swaps++;
-                        j = j - 1;//Switch to the next element in the Arrayw
-                    //}
-                    //else
-                    //{
-                     //   break;
-                    //}
+                    Array[j + 1] = Array[j];//Shift the element to the 
+                    Swaps++;
+                    j = j - 1;//Switch to the next element in the Arrayw
                 }
                 Array[j + 1] = Key;
             }
