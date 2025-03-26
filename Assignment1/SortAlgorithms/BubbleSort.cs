@@ -10,20 +10,21 @@ namespace Assignment1
     {
         public override List<int> Ascending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
-            int n = Array.Count;
-            for (int i = 0; i < n - 1; i++)
+            Comparisons = 0;
+            Swaps = 0;
+            int ArrayCount = Array.Count;
+            for (int i = 0; i < ArrayCount - 1; i++)//Runs for ArrayCount-1 iterations 
             {
-                for (int j = 0; j < n - 1 - i; j++)
+                for (int j = 0; j < ArrayCount - 1 - i; j++)
                 {
-                    comparisons++;
-                    if (Array[j + 1] < Array[j])
-                    {
-                        int temp = Array[j];
-                        Array[j] = Array[j + 1];
-                        Array[j + 1] = temp;
-                        swaps++;
+                    Comparisons++;
+                    //< makes this ascending
+                    if (Array[j + 1] < Array[j])//Check if next element is smaller than current
+                    {//Swaps element if out of order
+                        int temp = Array[j];//Stores element in temp variable
+                        Array[j] = Array[j + 1];//Swap current element with next one
+                        Array[j + 1] = temp;//Override next element with value of temp 
+                        Swaps++;
                     }
                 }
             }
@@ -31,20 +32,21 @@ namespace Assignment1
         }
         public override List<int> Descending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
-            int n = Array.Count;
-            for (int i = 0; i < n - 1; i++)
+            Comparisons = 0;
+            Swaps = 0;
+            int ArrayCount = Array.Count;
+            for (int i = 0; i < ArrayCount - 1; i++)//Runs for ArrayCount-1 iterations 
             {
-                for (int j = 0; j < n - 1 - i; j++)
+                for (int j = 0; j < ArrayCount - 1 - i; j++)
                 {
-                    comparisons++;
-                    if (Array[j + 1] > Array[j])
-                    {
-                        int temp = Array[j];
-                        Array[j] = Array[j + 1];
-                        Array[j + 1] = temp;
-                        swaps++;
+                    Comparisons++;
+                    //< makes this descending
+                    if (Array[j + 1] > Array[j])//Check if next element is smaller than current
+                    {//Swaps element if out of order
+                        int temp = Array[j];//Stores element in temp variable
+                        Array[j] = Array[j + 1];//Swap current element with next one
+                        Array[j + 1] = temp;//Override next element with value of temp 
+                        Swaps++;
                     }
                 }
             }
