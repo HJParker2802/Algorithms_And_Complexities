@@ -59,11 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ReadMe.md" />
   </ItemGroup>
   <ItemGroup />
-  <ItemGroup>
-    <EmbeddedResource Include="Files\Test.txt" />
-  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Files\Share_1_2048.txt" />
     <Content Include="Files\Share_1_256.txt" />
