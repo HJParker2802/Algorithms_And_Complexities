@@ -11,24 +11,24 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
+            Comparisons = 0;
+            Swaps = 0;
             int ArrayLength = Array.Count;
             for (int i = 1; i < ArrayLength; i++)
             {
-                int Key = Array[i]; //Current element being considered
+                int Key = Array[i]; //Current element being to be inserted 
                 int j = i - 1;
                 while (j >= 0 && Array[j] > Key)
-                {
-                    comparisons++;
-                    Array[j + 1] = Array[j];
-                    swaps++;
-                    j = j - 1;
+                {// Array[j] < Key is what makes this ascending
+                    Comparisons++;
+                    Array[j + 1] = Array[j];//Shift the element to the right 
+                    Swaps++;
+                    j = j - 1;//Switch to the next element in the Array 
                 }
-                Array[j + 1] = Key;
-            }
-            return Array;
-        }
+                Array[j + 1] = Key;//Puts Key into the correct position
+            }//Process repeats over and over again until fully sorted 
+            return Array;//Returns sorted list 
+        }   
         public override List<int> Descending(List<int> Array)
         {
             int ArrayLength = Array.Count;
@@ -37,18 +37,18 @@ namespace Assignment1.SortAlgorithms
                 int Key = Array[i]; //Current element being considered
                 int j = i - 1;
                 while (j >= 0 && Array[j] < Key)
-                {
-                    comparisons++;
-                    if (Array[i] > Key)
-                    {
-                        Array[j + 1] = Array[j];
-                        swaps++;
-                        j = j - 1;
-                    }
-                    else
-                    {
-                        break;
-                    }
+                {// Array[j] < Key is what makes this descending
+                    Comparisons++;
+                    //if (Array[i] > Key)
+                    //{
+                        Array[j + 1] = Array[j];//Shift the element to the 
+                        Swaps++;
+                        j = j - 1;//Switch to the next element in the Arrayw
+                    //}
+                    //else
+                    //{
+                     //   break;
+                    //}
                 }
                 Array[j + 1] = Key;
             }
