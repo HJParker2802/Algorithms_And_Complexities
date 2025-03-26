@@ -50,6 +50,7 @@ namespace Assignment1
                     List<int> Share1_256 = read.ReadFile("Share_1_256.txt");
                     List<int> Share2_256 = read.ReadFile("Share_2_256.txt");
                     List<int> Share3_256 = read.ReadFile("Share_3_256.txt");
+                    Console.WriteLine("\n\n\n");
 
                     Console.WriteLine("Task 2");
                     //Task 2
