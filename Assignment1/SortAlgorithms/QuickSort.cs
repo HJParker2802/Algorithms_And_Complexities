@@ -12,8 +12,8 @@ namespace Assignment1.SortAlgorithms
         public override List<int> Ascending(List<int> Array)
         {
             //Method to declare variables that can be changed later on with recursion
-            comparisons = 0;
-            swaps = 0;
+            Comparisons = 0;
+            Swaps = 0;
             QuickSortAscending(Array, 0, Array.Count - 1);//Triggers necessary method 
             return Array;//returns sorted array at the end 
         }
@@ -29,19 +29,19 @@ namespace Assignment1.SortAlgorithms
                 while ((Array[LeftPointer] < Middle) && (LeftPointer < Right))
                 {
                     LeftPointer++;//Moves to the right while looking for number bigger than middle
-                    comparisons++;
+                    Comparisons++;
                 }
                 while ((Middle < Array[RightPointer]) && (RightPointer > Left)) 
                 {
                     RightPointer--;//Moves to the right looking for number smaller than middle
-                    comparisons++;
+                    Comparisons++;
                 }
                 if (LeftPointer <= RightPointer)
                 {
                     temp = Array[LeftPointer];
                     Array[LeftPointer] = Array[RightPointer];
                     Array[RightPointer] = temp;//Swaps Left and Right Pointers
-                    swaps++;
+                    Swaps++;
                     LeftPointer++;
                     RightPointer--;
                 }
@@ -51,8 +51,8 @@ namespace Assignment1.SortAlgorithms
         }   
         public override List<int> Descending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
+            Comparisons = 0;
+            Swaps = 0;
             QuickSortDescending(Array, 0, Array.Count - 1);
             return Array;//returns sorted array at the end 
         }
@@ -68,19 +68,19 @@ namespace Assignment1.SortAlgorithms
                 while ((Array[LeftPointer] > Middle) && (LeftPointer < right)) 
                 {
                     LeftPointer++;//Moves to the right while looking for number bigger than middle
-                    comparisons++;
+                    Comparisons++;
                 }
                 while ((Middle > Array[RightPointer]) && (RightPointer > left)) 
                 {
                     RightPointer--;//Moves to the right looking for number smaller than middle
-                    comparisons++;
+                    Comparisons++;
                 }
                 if (LeftPointer <= RightPointer)
                 {
                     temp = Array[LeftPointer];
                     Array[LeftPointer] = Array[RightPointer];
                     Array[RightPointer] = temp;//Swaps Left and Right Pointers
-                    swaps++;
+                    Swaps++;
                     LeftPointer++;
                     RightPointer--;
                 }
