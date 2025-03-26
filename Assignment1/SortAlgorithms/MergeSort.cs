@@ -10,11 +10,13 @@ namespace Assignment1.SortAlgorithms
     {
         public override List<int> Ascending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
+            Comparisons = 0;
+            Swaps = 0;
             //if list has 1 or fewer elements, its already sorted
             if (Array.Count <= 1)
+            {
                 return Array;
+            }
             List<int> Left = new List<int>();
             List<int> Right = new List<int>();
 
@@ -40,31 +42,31 @@ namespace Assignment1.SortAlgorithms
             {
                 if (Left.Count > 0 && Right.Count > 0)//While both left and right have values, keep merging until gone
                 {
-                    comparisons++;
-                    if (Left.First() <= Right.First())
+                    Comparisons++;
+                    if (Left.First() <= Right.First())// <= for ascending
                     {
                         Result.Add(Left.First());
                         Left.Remove(Left.First());
-                        swaps++;
+                        Swaps++;
                     }
                     else
                     {
                         Result.Add(Right.First());
                         Right.Remove(Right.First());
-                        swaps++;
+                        Swaps++;
                     }
                 }
                 else if (Left.Count > 0)//if only left has values, add until none left
                 {
                     Result.Add(Left.First());
                     Left.Remove(Left.First());
-                    swaps++;
+                    Swaps++;
                 }
                 else if (Right.Count > 0)//if only right has values, add until none left
                 {
                     Result.Add(Right.First());
                     Right.Remove(Right.First());
-                    swaps++;
+                    Swaps++;
                 }
             }
             return Result;
@@ -72,11 +74,13 @@ namespace Assignment1.SortAlgorithms
 
         public override List<int> Descending(List<int> Array)
         {
-            comparisons = 0;
-            swaps = 0;
+            Comparisons = 0;
+            Swaps = 0;
             //if list has 1 or fewer elements, its already sorted
             if (Array.Count <= 1)
+            {
                 return Array;
+            }
             List<int> Left = new List<int>();
             List<int> Right = new List<int>();
 
@@ -102,31 +106,31 @@ namespace Assignment1.SortAlgorithms
             {
                 if (Left.Count > 0 && Right.Count > 0)//If both have values, do both left and right until gone
                 {
-                    comparisons++;
-                    if (Left.First() >= Right.First())
+                    Comparisons++;
+                    if (Left.First() >= Right.First())// >= for descending
                     {
                         Result.Add(Left.First());
                         Left.Remove(Left.First());
-                        swaps++;
+                        Swaps++;
                     }
                     else
                     {
                         Result.Add(Right.First());
                         Right.Remove(Right.First());
-                        swaps++;
+                        Swaps++;
                     }
                 }
                 else if (Left.Count > 0)//If only left has values, Sort left
                 {
                     Result.Add(Left.First());
                     Left.Remove(Left.First());
-                    swaps++;
+                    Swaps++;
                 }
                 else if (Right.Count > 0)//If only right has values, sort right
                 {
                     Result.Add(Right.First());
                     Right.Remove(Right.First());
-                    swaps++;
+                    Swaps++;
                 }
             }
             return Result;//Returns completed Arrays
